@@ -1,0 +1,233 @@
+:root {
+  --red: #FF0033;
+  --orange: #FF7700;
+  --yellow: #FFAA00;
+  --green: #AADD22;
+  --blue: #0088FF;
+  --purple: #9911AA;
+  --hotpink: hotpink;
+  --height: 150px;
+  --half-height: 75px;
+  --duration: 5s;
+}
+
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 2em;
+  background: black;
+}
+
+#colosseum {
+  display: grid;
+  grid-column-gap: 35px;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+div {
+  transition: all 1s;
+}
+
+.arc {
+  height: var(--half-height);
+  width: 100%;
+  border-top-left-radius: 75px;
+  border-top-right-radius: 75px;
+}
+
+.bottom {
+  height: var(--height);
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+.red {
+  background-color: var(--red);
+  animation: rainbow-red var(--duration) linear;
+	animation-iteration-count: infinite;
+}
+
+.orange {
+  background-color: var(--orange);
+  animation: rainbow-orange var(--duration) linear;
+	animation-iteration-count: infinite;
+}
+
+.yellow {
+  background-color: var(--yellow);
+  animation: rainbow-yellow var(--duration) linear;
+	animation-iteration-count: infinite;
+}
+
+.green {
+  background-color: var(--green);
+  animation: rainbow-green var(--duration) linear;
+	animation-iteration-count: infinite;
+}
+
+.blue {
+  background-color: var(--blue);
+  animation: rainbow-blue var(--duration) linear;
+	animation-iteration-count: infinite;
+}
+
+.purple {
+  background-color: var(--purple);
+  animation: rainbow-purple var(--duration) linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes rainbow-red {
+		100%,0%{
+			background-color: var(--red);
+		}
+		14%{
+			background-color: var(--orange);
+		}
+		28%{
+			background-color: var(--yellow);
+		}
+		42%{
+			background-color: var(--green);
+		}
+		56%{
+			background-color: var(--blue);
+		}
+		70%{
+			background-color: var(--purple);
+		}
+		84%{
+			background-color: var(--hotpink);
+		}
+}
+
+@keyframes rainbow-orange {
+		100%,0%{
+			background-color: var(--orange);
+		}
+		14%{
+			background-color: var(--yellow);
+		}
+		28%{
+			background-color: var(--green);
+		}
+		42%{
+			background-color: var(--blue);
+		}
+		56%{
+			background-color: var(--purple);
+		}
+		70%{
+			background-color: var(--hotpink);
+		}
+		84%{
+			background-color: var(--red);
+		}
+}
+
+@keyframes rainbow-yellow {
+		100%,0%{
+			background-color: var(--yellow);
+		}
+		14%{
+			background-color: var(--green);
+		}
+		28%{
+			background-color: var(--blue);
+		}
+		42%{
+			background-color: var(--purple);
+		}
+		56%{
+			background-color: var(--hotpink);
+		}
+		70%{
+			background-color: var(--red);
+		}
+		84%{
+			background-color: var(--orange);
+		}
+}
+
+@keyframes rainbow-green {
+		100%,0%{
+			background-color: var(--green);
+		}
+		14%{
+			background-color: var(--blue);
+		}
+		28%{
+			background-color: var(--purple);
+		}
+		42%{
+			background-color: var(--hotpink);
+		}
+		56%{
+			background-color: var(--red);
+		}
+		70%{
+			background-color: var(--orange);
+		}
+		84%{
+			background-color: var(--yellow);
+		}
+}
+
+@keyframes rainbow-blue {
+		100%,0%{
+			background-color: var(--blue);
+		}
+		14%{
+			background-color: var(--purple);
+		}
+		28%{
+			background-color: var(--hotpink);
+		}
+		42%{
+			background-color: var(--red);
+		}
+		56%{
+			background-color: var(--orange);
+		}
+		70%{
+			background-color: var(--yellow);
+		}
+		84%{
+			background-color: var(--green);
+		}
+}
+
+@keyframes rainbow-purple {
+		100%,0%{
+			background-color: var(--purple);
+		}
+		14%{
+			background-color: var(--hotpink);
+		}
+		28%{
+			background-color: var(--red);
+		}
+		42%{
+			background-color: var(--orange);
+		}
+		56%{
+			background-color: var(--yellow);
+		}
+		70%{
+			background-color: var(--green);
+		}
+		84%{
+			background-color: var(--blue);
+		}
+}
+
+@media (max-width:600px) {
+  body {
+    margin: 10px;
+  }
+  #colosseum {
+    grid-column-gap: 0px;
+  }
+  .bottom {
+    height: var(--half-height);
+  }
+}
